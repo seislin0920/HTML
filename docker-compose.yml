@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  phpapache:
+    build: .
+    ports:
+      - "8087:80"
+    volumes:
+      - .:/var/www/html

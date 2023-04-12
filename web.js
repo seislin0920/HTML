@@ -71,18 +71,17 @@ function $(elem) {
 
 let title = document.querySelector('#title');
 let content = document.querySelector('#content');
-$('#list').aEL('click',function () {
-    $('#list').innerHTML = $('#list').innerHTML + `
+let list = document.querySelector('#list');
+$('#bt').aEL('click',function () {
+    alert('輸入成功');
+    list.innerHTML = list.innerHTML + `
       <div class="article">
               <h2>${title.value}</h2>
               <p>${content.value}</p>
               <hr/>
           </div>
-      `;  //``可以任意換行與引用js
+      `;//``可以任意換行與引用js
       title.value = '';
       content.value = '';
 });
   
-$('#bt').aEL('click',function () {
-    alert('輸入成功');
-  });
